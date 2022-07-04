@@ -1,0 +1,47 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2022-07-04 13:36:35.175288",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "maximum_number_of_booked_classes",
+  "locker_booking_period"
+ ],
+ "fields": [
+  {
+   "fieldname": "maximum_number_of_booked_classes",
+   "fieldtype": "Int",
+   "label": "Maximum number of booked classes"
+  },
+  {
+   "fieldname": "locker_booking_period",
+   "fieldtype": "Data",
+   "label": "Locker booking period"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "issingle": 1,
+ "links": [],
+ "modified": "2022-07-04 13:36:35.175288",
+ "modified_by": "Administrator",
+ "module": "Gym Manager",
+ "name": "Gym Settings",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

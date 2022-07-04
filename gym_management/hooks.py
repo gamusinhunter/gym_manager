@@ -7,6 +7,17 @@ app_description = "An app to manage a custom gym"
 app_email = "alosada@ctgalega.com"
 app_license = "MIT"
 
+
+
+fixtures = [
+    {
+	"doctype": "Role",
+	"filters": {
+		"name": ["in", "Gym Admin,Gym Member,Gym Trainer"]
+        }
+	}
+]
+
 # Includes in <head>
 # ------------------
 
