@@ -11,13 +11,14 @@
   "from_date",
   "to_date",
   "paid",
-  "amended_from"
+  "amended_from",
+  "rating"
  ],
  "fields": [
   {
    "fieldname": "gym_trianer",
    "fieldtype": "Link",
-   "label": "Gym Trianer",
+   "label": "Gym Trainer",
    "options": "Gym Trainer"
   },
   {
@@ -49,12 +50,17 @@
    "options": "Gym Trainer Subscription",
    "print_hide": 1,
    "read_only": 1
+  },
+  {
+   "fieldname": "rating",
+   "fieldtype": "Rating",
+   "label": "Rating"
   }
  ],
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2022-07-04 13:44:21.500293",
+ "modified": "2022-07-04 16:57:26.300510",
  "modified_by": "Administrator",
  "module": "Gym Manager",
  "name": "Gym Trainer Subscription",

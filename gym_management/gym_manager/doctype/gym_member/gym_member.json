@@ -1,32 +1,86 @@
 {
  "actions": [],
  "allow_rename": 1,
+ "autoname": "format:{first_name}-{last_name}-{####}",
  "creation": "2022-07-04 12:44:36.498781",
  "doctype": "DocType",
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
-  "name1",
-  "phone"
+  "first_name",
+  "last_name",
+  "full_name",
+  "email",
+  "phone",
+  "weight",
+  "squat_pr",
+  "observations",
+  "picture"
  ],
  "fields": [
   {
-   "fieldname": "name1",
-   "fieldtype": "Data",
-   "label": "Name"
-  },
-  {
    "fieldname": "phone",
    "fieldtype": "Data",
-   "label": "Phone"
+   "in_list_view": 1,
+   "label": "Phone",
+   "options": "Phone",
+   "reqd": 1
+  },
+  {
+   "fieldname": "weight",
+   "fieldtype": "Float",
+   "label": "Weight"
+  },
+  {
+   "fieldname": "squat_pr",
+   "fieldtype": "Float",
+   "label": "Squat PR"
+  },
+  {
+   "fieldname": "observations",
+   "fieldtype": "Small Text",
+   "label": "Observations"
+  },
+  {
+   "fieldname": "email",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Email",
+   "options": "Email",
+   "reqd": 1
+  },
+  {
+   "fieldname": "picture",
+   "fieldtype": "Attach Image",
+   "label": "Picture"
+  },
+  {
+   "fieldname": "full_name",
+   "fieldtype": "Data",
+   "label": "Full name",
+   "read_only": 1
+  },
+  {
+   "fieldname": "first_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "First name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "last_name",
+   "fieldtype": "Data",
+   "label": "Last name",
+   "reqd": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2022-07-04 12:44:36.498781",
+ "modified": "2022-07-04 17:56:45.536818",
  "modified_by": "Administrator",
  "module": "Gym Manager",
  "name": "Gym Member",
+ "naming_rule": "Expression",
  "owner": "Administrator",
  "permissions": [
   {

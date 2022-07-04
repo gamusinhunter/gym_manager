@@ -1,13 +1,14 @@
 {
  "actions": [],
  "allow_rename": 1,
+ "autoname": "field:full_name",
  "creation": "2022-07-04 12:46:53.763278",
  "doctype": "DocType",
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
-  "gym_member",
   "full_name",
+  "gym_member",
   "from_date",
   "to_date",
   "paid",
@@ -19,11 +20,6 @@
    "fieldtype": "Link",
    "label": "Gym Member",
    "options": "Gym Member"
-  },
-  {
-   "fieldname": "full_name",
-   "fieldtype": "Data",
-   "label": "Full name"
   },
   {
    "fieldname": "from_date",
@@ -49,15 +45,24 @@
    "options": "Gym Membership",
    "print_hide": 1,
    "read_only": 1
+  },
+  {
+   "fetch_from": "gym_member.full_name",
+   "fieldname": "full_name",
+   "fieldtype": "Data",
+   "label": "Full name",
+   "read_only": 1,
+   "unique": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2022-07-04 13:44:04.076299",
+ "modified": "2022-07-04 18:01:49.174370",
  "modified_by": "Administrator",
  "module": "Gym Manager",
  "name": "Gym Membership",
+ "naming_rule": "By fieldname",
  "owner": "Administrator",
  "permissions": [
   {
