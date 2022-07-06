@@ -1,6 +1,7 @@
 {
  "actions": [],
  "allow_rename": 1,
+ "autoname": "format:{gym_class}-{gym_member}",
  "creation": "2022-07-04 13:32:26.301637",
  "doctype": "DocType",
  "editable_grid": 1,
@@ -8,7 +9,8 @@
  "field_order": [
   "gym_member",
   "gym_class",
-  "spot"
+  "spot",
+  "amended_from"
  ],
  "fields": [
   {
@@ -21,20 +23,31 @@
    "fieldname": "gym_class",
    "fieldtype": "Link",
    "label": "Gym Class",
-   "options": "Gym Class"
+   "options": "Gym Group Class"
   },
   {
    "fieldname": "spot",
    "fieldtype": "Datetime",
    "label": "Spot"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Gym Group Class Booking",
+   "print_hide": 1,
+   "read_only": 1
   }
  ],
  "index_web_pages_for_search": 1,
+ "is_submittable": 1,
  "links": [],
- "modified": "2022-07-04 13:32:26.301637",
+ "modified": "2022-07-06 10:25:23.993241",
  "modified_by": "Administrator",
  "module": "Gym Manager",
- "name": "Gym Class Booking",
+ "name": "Gym Group Class Booking",
+ "naming_rule": "Expression",
  "owner": "Administrator",
  "permissions": [
   {

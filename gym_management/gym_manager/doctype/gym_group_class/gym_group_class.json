@@ -1,26 +1,35 @@
 {
  "actions": [],
  "allow_rename": 1,
+ "autoname": "field:activity_name",
  "creation": "2022-07-04 13:31:14.832751",
  "doctype": "DocType",
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
-  "activity_name"
+  "activity_name",
+  "limited_to"
  ],
  "fields": [
   {
    "fieldname": "activity_name",
    "fieldtype": "Data",
-   "label": "Activity name"
+   "label": "Activity name",
+   "unique": 1
+  },
+  {
+   "fieldname": "limited_to",
+   "fieldtype": "Int",
+   "label": "Limited to"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2022-07-04 13:31:14.832751",
+ "modified": "2022-07-06 10:28:57.287917",
  "modified_by": "Administrator",
  "module": "Gym Manager",
- "name": "Gym Class",
+ "name": "Gym Group Class",
+ "naming_rule": "By fieldname",
  "owner": "Administrator",
  "permissions": [
   {

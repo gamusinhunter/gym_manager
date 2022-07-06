@@ -1,24 +1,21 @@
 {
  "actions": [],
  "allow_rename": 1,
+ "autoname": "field:plan_name",
  "creation": "2022-07-04 13:42:32.132069",
  "doctype": "DocType",
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
-  "gym_member",
+  "status",
+  "plan_name",
+  "level",
   "gym_trainer",
-  "from_date",
-  "to_date",
+  "length",
+  "description",
   "workout_plan"
  ],
  "fields": [
-  {
-   "fieldname": "gym_member",
-   "fieldtype": "Link",
-   "label": "Gym Member",
-   "options": "Gym Member"
-  },
   {
    "fieldname": "gym_trainer",
    "fieldtype": "Link",
@@ -26,28 +23,47 @@
    "options": "Gym Trainer"
   },
   {
-   "fieldname": "from_date",
-   "fieldtype": "Date",
-   "label": "From date"
-  },
-  {
-   "fieldname": "to_date",
-   "fieldtype": "Date",
-   "label": "To date"
-  },
-  {
    "fieldname": "workout_plan",
    "fieldtype": "Table",
    "label": "Workout Plan",
    "options": "Gym Workout Plan Exercise"
+  },
+  {
+   "fieldname": "level",
+   "fieldtype": "Select",
+   "label": "Level",
+   "options": "Beginner\nIntermediate\nAdvanced"
+  },
+  {
+   "fieldname": "plan_name",
+   "fieldtype": "Data",
+   "label": "Plan name",
+   "unique": 1
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Available\nTrial\nSubscribed\nUnsubscribed"
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Small Text",
+   "label": "Description"
+  },
+  {
+   "fieldname": "length",
+   "fieldtype": "Int",
+   "label": "Length (days)"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2022-07-04 13:42:32.132069",
+ "modified": "2022-07-06 09:43:37.905871",
  "modified_by": "Administrator",
  "module": "Gym Manager",
  "name": "Gym Workout Plan",
+ "naming_rule": "By fieldname",
  "owner": "Administrator",
  "permissions": [
   {
@@ -65,5 +81,22 @@
  ],
  "sort_field": "modified",
  "sort_order": "DESC",
- "states": []
+ "states": [
+  {
+   "color": "Blue",
+   "title": "Available"
+  },
+  {
+   "color": "Pink",
+   "title": "Trial"
+  },
+  {
+   "color": "Green",
+   "title": "Subscribed"
+  },
+  {
+   "color": "Red",
+   "title": "Unsubscribed"
+  }
+ ]
 }

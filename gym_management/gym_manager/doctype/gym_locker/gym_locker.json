@@ -1,26 +1,36 @@
 {
  "actions": [],
  "allow_rename": 1,
+ "autoname": "field:locker_code",
  "creation": "2022-07-04 13:28:39.410529",
  "doctype": "DocType",
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
-  "locked_code"
+  "locker_code",
+  "status"
  ],
  "fields": [
   {
-   "fieldname": "locked_code",
+   "fieldname": "locker_code",
    "fieldtype": "Data",
-   "label": "Locked code"
+   "label": "Locker code",
+   "unique": 1
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Available\nNot available"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2022-07-04 13:28:39.410529",
+ "modified": "2022-07-06 09:48:54.785091",
  "modified_by": "Administrator",
  "module": "Gym Manager",
  "name": "Gym Locker",
+ "naming_rule": "By fieldname",
  "owner": "Administrator",
  "permissions": [
   {
@@ -38,5 +48,14 @@
  ],
  "sort_field": "modified",
  "sort_order": "DESC",
- "states": []
+ "states": [
+  {
+   "color": "Green",
+   "title": "Available"
+  },
+  {
+   "color": "Red",
+   "title": "Not available"
+  }
+ ]
 }

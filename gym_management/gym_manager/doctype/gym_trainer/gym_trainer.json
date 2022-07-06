@@ -1,26 +1,42 @@
 {
  "actions": [],
  "allow_rename": 1,
+ "autoname": "field:name1",
  "creation": "2022-07-04 12:48:05.471934",
  "doctype": "DocType",
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
-  "name1"
+  "photo",
+  "name1",
+  "rating_and_reviews"
  ],
  "fields": [
   {
    "fieldname": "name1",
    "fieldtype": "Data",
-   "label": "Name"
+   "label": "Name",
+   "unique": 1
+  },
+  {
+   "fieldname": "rating_and_reviews",
+   "fieldtype": "Table",
+   "label": "Rating and reviews",
+   "options": "Gym Trainer Review"
+  },
+  {
+   "fieldname": "photo",
+   "fieldtype": "Attach Image",
+   "label": "Photo"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2022-07-04 12:48:05.471934",
+ "modified": "2022-07-05 17:24:31.782468",
  "modified_by": "Administrator",
  "module": "Gym Manager",
  "name": "Gym Trainer",
+ "naming_rule": "By fieldname",
  "owner": "Administrator",
  "permissions": [
   {

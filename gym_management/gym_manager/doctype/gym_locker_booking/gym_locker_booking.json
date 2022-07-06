@@ -1,53 +1,67 @@
 {
  "actions": [],
  "allow_rename": 1,
+ "autoname": "format:{gym_locker}-{gym_member}-{to_date}",
  "creation": "2022-07-04 13:30:20.062113",
  "doctype": "DocType",
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
-  "locker",
-  "member",
-  "from_date",
-  "to_date",
-  "paid"
+  "gym_locker",
+  "gym_member",
+  "type",
+  "status",
+  "date",
+  "amended_from"
  ],
  "fields": [
   {
-   "fieldname": "locker",
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Gym Locker Booking",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "gym_locker",
    "fieldtype": "Link",
    "label": "Locker",
    "options": "Gym Locker"
   },
   {
-   "fieldname": "member",
+   "fieldname": "gym_member",
    "fieldtype": "Link",
    "label": "Member",
    "options": "Gym Member"
   },
   {
-   "fieldname": "from_date",
-   "fieldtype": "Date",
-   "label": "From date"
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Available\nNot available"
   },
   {
-   "fieldname": "to_date",
+   "fieldname": "date",
    "fieldtype": "Date",
-   "label": "To date"
+   "label": "Date"
   },
   {
-   "default": "0",
-   "fieldname": "paid",
-   "fieldtype": "Check",
-   "label": "Paid"
+   "fieldname": "type",
+   "fieldtype": "Select",
+   "label": "Type",
+   "options": "Book\nRelease"
   }
  ],
  "index_web_pages_for_search": 1,
+ "is_submittable": 1,
  "links": [],
- "modified": "2022-07-04 13:30:20.062113",
+ "modified": "2022-07-06 13:33:07.967777",
  "modified_by": "Administrator",
  "module": "Gym Manager",
  "name": "Gym Locker Booking",
+ "naming_rule": "Expression",
  "owner": "Administrator",
  "permissions": [
   {

@@ -1,20 +1,31 @@
 {
  "actions": [],
  "allow_rename": 1,
- "autoname": "format:{gym_trainer}-{gym_member}",
- "creation": "2022-07-04 13:22:40.372016",
+ "autoname": "format:{gym_member}-{to_date}",
+ "creation": "2022-07-06 10:23:54.090492",
  "doctype": "DocType",
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
-  "gym_trainer",
+  "gym_workout_plan",
   "gym_member",
   "from_date",
   "to_date",
-  "paid",
   "amended_from"
  ],
  "fields": [
+  {
+   "fieldname": "gym_workout_plan",
+   "fieldtype": "Link",
+   "label": "Gym Workout Plan",
+   "options": "Gym Workout Plan"
+  },
+  {
+   "fieldname": "gym_member",
+   "fieldtype": "Link",
+   "label": "Gym Member",
+   "options": "Gym Member"
+  },
   {
    "fieldname": "from_date",
    "fieldtype": "Date",
@@ -26,40 +37,22 @@
    "label": "To date"
   },
   {
-   "default": "0",
-   "fieldname": "paid",
-   "fieldtype": "Check",
-   "label": "Paid"
-  },
-  {
    "fieldname": "amended_from",
    "fieldtype": "Link",
    "label": "Amended From",
    "no_copy": 1,
-   "options": "Gym Trainer Subscription",
+   "options": "Gym Workout Plan Subscription",
    "print_hide": 1,
    "read_only": 1
-  },
-  {
-   "fieldname": "gym_trainer",
-   "fieldtype": "Link",
-   "label": "Gym Trainer",
-   "options": "Gym Trainer"
-  },
-  {
-   "fieldname": "gym_member",
-   "fieldtype": "Link",
-   "label": "Gym Member",
-   "options": "Gym Member"
   }
  ],
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2022-07-06 10:29:25.821709",
+ "modified": "2022-07-06 10:24:16.842239",
  "modified_by": "Administrator",
  "module": "Gym Manager",
- "name": "Gym Trainer Subscription",
+ "name": "Gym Workout Plan Subscription",
  "naming_rule": "Expression",
  "owner": "Administrator",
  "permissions": [
