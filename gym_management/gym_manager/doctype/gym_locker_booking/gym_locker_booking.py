@@ -28,7 +28,6 @@ class GymLockerBooking(Document):
 			frappe.throw("This locker is already booked. Please select another one")	
 
 	def validate_releasing(self):
-		self.validate_membership()
 		gym_locker = frappe.get_doc("Gym Locker",self.gym_locker)
 		if gym_locker.status == "Available":
 			frappe.throw("Book a locker before releasing it")	

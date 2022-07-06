@@ -40,11 +40,59 @@ frappe.ui.form.on('Gym Member', {
 		frm.add_custom_button('Book Group class', () => {
 			
 		})
+
 		frm.add_custom_button('Subscribe Workout Plan', () => {
-			
+			let dialog = new frappe.ui.Dialog({
+				title: 'Subscribe a workout plan',
+				fields: [
+					{
+						fieldname: 'gym_workout_plan',
+						label: 'Workout Plan',
+						fieldtype: 'Link',
+						options: 'Gym Workout Plan',
+					}
+				],
+				primary_action(values){
+					frappe.db.insert({
+						doctype: 'Gym Workout Plan Subscription',
+						gym_member: frm.doc.name,
+						gym_workout_plan: values.gym_workout_plan,
+						action: 'Subscribe',
+						date: frappe.datetime.now_date(),
+					}).then(doc =>{
+						dialog.hide();
+						frappe.set_route('Form','Gym Workout Plan Subscription',doc.name);
+					})
+				}
+			});
+			dialog.show();
 		})
+
 		frm.add_custom_button('Subscribe Professional Trainer Plan', () => {
-			
+			let dialog = new frappe.ui.Dialog({
+				title: 'Subscribe a professional trainer plan',
+				fields: [
+					{
+						fieldname: 'gym_professional_trainer_plan',
+						label: 'Professional Workout Plan',
+						fieldtype: 'Link',
+						options: 'Gym Professional Trainer Plan',
+					}
+				],
+				primary_action(values){
+					frappe.db.insert({
+						doctype: 'Gym Professional Trainer Plan Subscription',
+						gym_member: frm.doc.name,
+						gym_professional_workout_plan: values.gym_professional_workout_plan,
+						action: 'Subscribe',
+						date: frappe.datetime.now_date(),
+					}).then(doc =>{
+						dialog.hide();
+						frappe.set_route('Form','Gym Professional Trainer Plan Subscription',doc.name);
+					})
+				}
+			});
+			dialog.show();		
 		})
 	}
 });

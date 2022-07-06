@@ -44,7 +44,7 @@
    "fieldname": "status",
    "fieldtype": "Select",
    "label": "Status",
-   "options": "Available\nTrial\nSubscribed\nUnsubscribed"
+   "options": "Subscribed\nUnsubscribed"
   },
   {
    "fieldname": "description",
@@ -59,7 +59,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2022-07-06 09:43:37.905871",
+ "modified": "2022-07-06 16:55:52.451590",
  "modified_by": "Administrator",
  "module": "Gym Manager",
  "name": "Gym Workout Plan",
