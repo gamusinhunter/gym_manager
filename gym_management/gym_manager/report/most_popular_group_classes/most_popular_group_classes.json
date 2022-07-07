@@ -1,0 +1,27 @@
+{
+ "add_total_row": 0,
+ "columns": [],
+ "creation": "2022-07-07 16:22:12.794026",
+ "disable_prepared_report": 0,
+ "disabled": 0,
+ "docstatus": 0,
+ "doctype": "Report",
+ "filters": [],
+ "idx": 0,
+ "is_standard": "Yes",
+ "json": "{\"filters\":[],\"fields\":[[\"gym_class\",\"Gym Group Class Booking\"],[\"_aggregate_column\",\"Gym Group Class Booking\"]],\"order_by\":\"`tabGym Group Class Booking`.`modified` desc\",\"add_totals_row\":0,\"page_length\":20,\"column_widths\":{\"gym_class\":120,\"_aggregate_column\":200},\"group_by\":{\"group_by\":\"`tabGym Group Class Booking`.`gym_class`\",\"aggregate_function\":\"count\"}}",
+ "modified": "2022-07-07 16:30:30.361053",
+ "modified_by": "Administrator",
+ "module": "Gym Manager",
+ "name": "Most popular group classes",
+ "owner": "Administrator",
+ "prepared_report": 0,
+ "ref_doctype": "Gym Group Class Booking",
+ "report_name": "Most popular group classes",
+ "report_type": "Report Builder",
+ "roles": [
+  {
+   "role": "System Manager"
+  }
+ ]
+}

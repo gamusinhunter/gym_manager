@@ -19,7 +19,10 @@ class GymLockerBooking(Document):
 			gym_locker.save()
 
 	def validate(self):
-		self.validate_membership()
+		# if self.to_date <= self.from_date:
+		# 	frappe.throw("To date cannot be earlier than from date")
+		locker_booking_period = frappe.db.get_single_value("Gym Settings","locker_booking_period")
+		self.to_date = frappe.utils.add_days(self.from_date, locker_booking_period or 15)
 
 	def validate_booking(self):
 		self.validate_membership()

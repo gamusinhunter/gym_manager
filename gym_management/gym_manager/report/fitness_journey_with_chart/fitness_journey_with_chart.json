@@ -1,0 +1,27 @@
+{
+ "add_total_row": 0,
+ "columns": [],
+ "creation": "2022-07-07 17:00:17.546254",
+ "disable_prepared_report": 0,
+ "disabled": 0,
+ "docstatus": 0,
+ "doctype": "Report",
+ "filters": [],
+ "idx": 0,
+ "is_standard": "Yes",
+ "json": "{\"filters\":[[\"Gym Member\",\"name\",\"like\",\"%0009%\"]],\"fields\":[[\"name\",\"Gym Member\"],[\"initial_squat_pr\",\"Gym Member\"],[\"initial_weight\",\"Gym Member\"],[\"initial_bmi\",\"Gym Member\"],[\"date\",\"Gym Member Metrics\"],[\"bmi\",\"Gym Member Metrics\"],[\"idx\",\"Gym Member Metrics\"],[\"weight\",\"Gym Member Metrics\"],[\"squat_pr\",\"Gym Member Metrics\"]],\"order_by\":\"`tabGym Member`.`modified` desc\",\"add_totals_row\":0,\"page_length\":20,\"column_widths\":{\"name\":120,\"initial_squat_pr\":120,\"initial_weight\":120,\"initial_bmi\":120,\"Gym Member Metrics:date\":120,\"Gym Member Metrics:bmi\":120,\"Gym Member Metrics:idx\":120,\"Gym Member Metrics:weight\":120,\"Gym Member Metrics:squat_pr\":120},\"group_by\":null,\"chart_args\":{\"chart_type\":\"line\",\"x_axis\":\"Gym Member Metrics:squat_pr\",\"y_axes\":[\"Gym Member Metrics:squat_pr\"]}}",
+ "modified": "2022-07-07 17:00:45.291015",
+ "modified_by": "Administrator",
+ "module": "Gym Manager",
+ "name": "Fitness Journey with chart",
+ "owner": "Administrator",
+ "prepared_report": 0,
+ "ref_doctype": "Gym Member",
+ "report_name": "Fitness Journey with chart",
+ "report_type": "Report Builder",
+ "roles": [
+  {
+   "role": "System Manager"
+  }
+ ]
+}

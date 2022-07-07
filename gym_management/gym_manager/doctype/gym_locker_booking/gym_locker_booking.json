@@ -12,7 +12,9 @@
   "type",
   "status",
   "date",
-  "amended_from"
+  "amended_from",
+  "from_date",
+  "to_date"
  ],
  "fields": [
   {
@@ -52,12 +54,23 @@
    "fieldtype": "Select",
    "label": "Type",
    "options": "Book\nRelease"
+  },
+  {
+   "fieldname": "from_date",
+   "fieldtype": "Date",
+   "label": "From date"
+  },
+  {
+   "fieldname": "to_date",
+   "fieldtype": "Date",
+   "label": "To date",
+   "read_only": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2022-07-06 13:33:07.967777",
+ "modified": "2022-07-07 17:25:37.462838",
  "modified_by": "Administrator",
  "module": "Gym Manager",
  "name": "Gym Locker Booking",

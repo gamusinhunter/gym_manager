@@ -19,6 +19,11 @@ frappe.ui.form.on('Gym Member', {
 						label: 'Locker',
 						fieldtype: 'Link',
 						options: 'Gym Locker',
+					},
+					{
+						fieldname: 'from_date',
+						label: 'From date',
+						fieldtype: 'Date',
 					}
 				],
 				primary_action(values){
@@ -26,6 +31,7 @@ frappe.ui.form.on('Gym Member', {
 						doctype: 'Gym Locker Booking',
 						gym_member: frm.doc.name,
 						gym_locker: values.gym_locker,
+						from_date: values.from_date,
 						type: 'Book',
 						date: frappe.datetime.now_date(),
 					}).then(doc =>{
@@ -48,6 +54,11 @@ frappe.ui.form.on('Gym Member', {
 						options: 'Gym Group Class',
 					},
 					{
+						fieldname: 'gym_group_class_day',
+						label: 'Day',
+						fieldtype: 'Date',
+					},
+					{
 						fieldname: 'gym_group_class_spot',
 						label: 'Spot',
 						fieldtype: 'Select',
@@ -59,6 +70,7 @@ frappe.ui.form.on('Gym Member', {
 						doctype: 'Gym Group Class Booking',
 						gym_member: frm.doc.name,
 						gym_class: values.gym_group_class,
+						day: values.gym_group_class_day,
 						spot: values.gym_group_class_spot,
 						date: frappe.datetime.now_date(),
 					}).then(doc =>{
@@ -106,13 +118,25 @@ frappe.ui.form.on('Gym Member', {
 						label: 'Professional Workout Plan',
 						fieldtype: 'Link',
 						options: 'Gym Professional Trainer Plan',
+					},
+					{
+						fieldname: 'gym_professional_trainer_plan_from_date',
+						label: 'From date',
+						fieldtype: 'Date'
+					},
+					{
+						fieldname: 'gym_professional_trainer_plan_to_date',
+						label: 'To date',
+						fieldtype: 'Date'
 					}
 				],
 				primary_action(values){
 					frappe.db.insert({
 						doctype: 'Gym Professional Trainer Plan Subscription',
 						gym_member: frm.doc.name,
-						gym_professional_workout_plan: values.gym_professional_workout_plan,
+						gym_professional_trainer_plan: values.gym_professional_trainer_plan,
+						from_date: values.gym_professional_trainer_plan_from_date,
+						to_date: values.gym_professional_trainer_plan_to_date,
 						action: 'Subscribe',
 						date: frappe.datetime.now_date(),
 					}).then(doc =>{

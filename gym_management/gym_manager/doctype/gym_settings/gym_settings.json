@@ -17,14 +17,14 @@
   },
   {
    "fieldname": "locker_booking_period",
-   "fieldtype": "Data",
+   "fieldtype": "Int",
    "label": "Locker booking period"
   }
  ],
  "index_web_pages_for_search": 1,
  "issingle": 1,
  "links": [],
- "modified": "2022-07-04 13:36:35.175288",
+ "modified": "2022-07-07 17:34:30.122118",
  "modified_by": "Administrator",
  "module": "Gym Manager",
  "name": "Gym Settings",

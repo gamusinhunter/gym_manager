@@ -9,6 +9,7 @@
  "field_order": [
   "gym_member",
   "gym_class",
+  "day",
   "spot",
   "amended_from"
  ],
@@ -27,8 +28,9 @@
   },
   {
    "fieldname": "spot",
-   "fieldtype": "Data",
-   "label": "Spot"
+   "fieldtype": "Select",
+   "label": "Spot",
+   "options": "17:00\n18:00\n19:00\n20:00\n21:00"
   },
   {
    "fieldname": "amended_from",
@@ -38,12 +40,17 @@
    "options": "Gym Group Class Booking",
    "print_hide": 1,
    "read_only": 1
+  },
+  {
+   "fieldname": "day",
+   "fieldtype": "Date",
+   "label": "Day"
   }
  ],
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2022-07-07 12:29:51.790446",
+ "modified": "2022-07-07 18:01:03.478538",
  "modified_by": "Administrator",
  "module": "Gym Manager",
  "name": "Gym Group Class Booking",

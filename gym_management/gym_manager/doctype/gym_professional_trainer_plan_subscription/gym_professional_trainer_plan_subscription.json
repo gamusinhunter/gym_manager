@@ -2,33 +2,19 @@
  "actions": [],
  "allow_rename": 1,
  "autoname": "format:{gym_trainer}-{gym_member}",
- "creation": "2022-07-06 18:23:58.342257",
+ "creation": "2022-07-04 13:22:40.372016",
  "doctype": "DocType",
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
   "gym_professional_trainer_plan",
-  "status",
   "gym_member",
   "from_date",
   "to_date",
-  "days_left",
   "paid",
   "amended_from"
  ],
  "fields": [
-  {
-   "fieldname": "gym_professional_trainer_plan",
-   "fieldtype": "Link",
-   "label": "Gym Professional Trainer Plan",
-   "options": "Gym Professional Trainer Plan"
-  },
-  {
-   "fieldname": "status",
-   "fieldtype": "Select",
-   "label": "Status",
-   "options": "Subscribed\nUnsubscribed"
-  },
   {
    "fieldname": "gym_member",
    "fieldtype": "Link",
@@ -61,15 +47,16 @@
    "read_only": 1
   },
   {
-   "fieldname": "days_left",
-   "fieldtype": "Int",
-   "label": "Days left"
+   "fieldname": "gym_professional_trainer_plan",
+   "fieldtype": "Link",
+   "label": "Gym Professional Trainer Plan",
+   "options": "Gym Professional Trainer Plan"
   }
  ],
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2022-07-07 12:06:24.192177",
+ "modified": "2022-07-07 18:18:46.855873",
  "modified_by": "Administrator",
  "module": "Gym Manager",
  "name": "Gym Professional Trainer Plan Subscription",
