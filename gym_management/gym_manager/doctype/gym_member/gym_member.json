@@ -14,8 +14,9 @@
   "phone",
   "date_of_birth",
   "age",
-  "weight",
-  "squat_pr",
+  "initial_weight",
+  "initial_squat_pr",
+  "initial_bmi",
   "observations",
   "picture",
   "gym_member_metrics"
@@ -28,16 +29,6 @@
    "label": "Phone",
    "options": "Phone",
    "reqd": 1
-  },
-  {
-   "fieldname": "weight",
-   "fieldtype": "Float",
-   "label": "Weight"
-  },
-  {
-   "fieldname": "squat_pr",
-   "fieldtype": "Float",
-   "label": "Squat PR"
   },
   {
    "fieldname": "observations",
@@ -91,11 +82,26 @@
    "fieldname": "age",
    "fieldtype": "Float",
    "label": "Age"
+  },
+  {
+   "fieldname": "initial_weight",
+   "fieldtype": "Float",
+   "label": "Initial weight"
+  },
+  {
+   "fieldname": "initial_squat_pr",
+   "fieldtype": "Float",
+   "label": "Initial squat PR"
+  },
+  {
+   "fieldname": "initial_bmi",
+   "fieldtype": "Data",
+   "label": "Initial BMI"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2022-07-06 17:25:09.625566",
+ "modified": "2022-07-07 13:31:19.754502",
  "modified_by": "Administrator",
  "module": "Gym Manager",
  "name": "Gym Member",

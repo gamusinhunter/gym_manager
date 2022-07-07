@@ -27,7 +27,7 @@
   },
   {
    "fieldname": "spot",
-   "fieldtype": "Datetime",
+   "fieldtype": "Data",
    "label": "Spot"
   },
   {
@@ -43,7 +43,7 @@
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2022-07-06 10:25:23.993241",
+ "modified": "2022-07-07 12:29:51.790446",
  "modified_by": "Administrator",
  "module": "Gym Manager",
  "name": "Gym Group Class Booking",

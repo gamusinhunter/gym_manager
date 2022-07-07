@@ -19,3 +19,6 @@ class GymMembership(Document):
 		)
 		if exists:
 			frappe.throw("There is already an active membership")
+
+		if self.to_date:
+			self.days_left = frappe.utils.date_diff(self.to_date,frappe.utils.today())

@@ -16,19 +16,12 @@ class GymWorkoutPlanSubscription(Document):
 			gym_workout_plan.status = "Unsubscribed"
 			gym_workout_plan.save()
 
+	def before_save(self):
+		if self.to_date:
+			self.days_left = frappe.utils.date_diff(self.to_date,frappe.utils.today())
+
 	def validate(self):
 		self.validate_membership()
-
-	# def validate_booking(self):
-	# 	self.validate_membership()
-	# 	gym_locker = frappe.get_doc("Gym Locker",self.gym_locker)
-	# 	if gym_locker.status == "Not available":
-	# 		frappe.throw("This locker is already booked. Please select another one")	
-
-	# def validate_releasing(self):
-	# 	gym_locker = frappe.get_doc("Gym Locker",self.gym_locker)
-	# 	if gym_locker.status == "Available":
-	# 		frappe.throw("Book a locker before releasing it")	
 
 	def validate_membership(self):
 		valid_membership = frappe.db.exists(

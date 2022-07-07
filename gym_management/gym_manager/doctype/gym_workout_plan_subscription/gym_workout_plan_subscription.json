@@ -12,6 +12,7 @@
   "action",
   "from_date",
   "to_date",
+  "days_left",
   "amended_from"
  ],
  "fields": [
@@ -51,12 +52,17 @@
    "fieldtype": "Select",
    "label": "Action",
    "options": "Subscribe\nUnsubscribe"
+  },
+  {
+   "fieldname": "days_left",
+   "fieldtype": "Int",
+   "label": "Days left"
   }
  ],
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2022-07-06 17:24:03.505864",
+ "modified": "2022-07-07 12:08:32.370940",
  "modified_by": "Administrator",
  "module": "Gym Manager",
  "name": "Gym Workout Plan Subscription",

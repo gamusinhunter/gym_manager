@@ -38,7 +38,36 @@ frappe.ui.form.on('Gym Member', {
 		})
 
 		frm.add_custom_button('Book Group class', () => {
-			
+			let dialog = new frappe.ui.Dialog({
+				title: 'Choose a group class',
+				fields: [
+					{
+						fieldname: 'gym_group_class',
+						label: 'Group Class',
+						fieldtype: 'Link',
+						options: 'Gym Group Class',
+					},
+					{
+						fieldname: 'gym_group_class_spot',
+						label: 'Spot',
+						fieldtype: 'Select',
+						options: ['17:00','18:00','19:00','20:00','21:00'],
+					}
+				],
+				primary_action(values){
+					frappe.db.insert({
+						doctype: 'Gym Group Class Booking',
+						gym_member: frm.doc.name,
+						gym_class: values.gym_group_class,
+						spot: values.gym_group_class_spot,
+						date: frappe.datetime.now_date(),
+					}).then(doc =>{
+						dialog.hide();
+						frappe.set_route('Form','Gym Group Class Booking',doc.name);
+					})
+				}
+			});
+			dialog.show();
 		})
 
 		frm.add_custom_button('Subscribe Workout Plan', () => {
