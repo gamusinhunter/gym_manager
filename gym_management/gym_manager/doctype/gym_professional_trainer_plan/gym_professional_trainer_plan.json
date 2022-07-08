@@ -45,7 +45,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2022-07-06 10:28:21.072039",
+ "modified": "2022-07-08 12:05:07.544832",
  "modified_by": "Administrator",
  "module": "Gym Manager",
  "name": "Gym Professional Trainer Plan",
@@ -67,5 +67,7 @@
  ],
  "sort_field": "modified",
  "sort_order": "DESC",
- "states": []
+ "states": [],
+ "track_seen": 1,
+ "track_views": 1
 }

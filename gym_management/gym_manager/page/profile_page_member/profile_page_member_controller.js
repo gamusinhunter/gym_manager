@@ -1,6 +1,7 @@
+import BaseTimeline from "../../../public/js/frappe/form/footer/base_timeline";
 frappe.provide('frappe.energy_points');
 
-class ProfilePageMember {
+class UserProfile {
 	constructor(wrapper) {
 		this.wrapper = $(wrapper);
 		this.page = frappe.ui.make_app_page({
@@ -382,6 +383,62 @@ class ProfilePageMember {
 		});
 
 		this.user_activity_timeline.refresh();
+	}
+}
+
+class UserProfileTimeline extends BaseTimeline {
+	make() {
+		super.make();
+		this.activity_start = 0;
+		this.activity_limit = 20;
+		this.setup_show_more_activity();
+	}
+	prepare_timeline_contents() {
+		return this.get_user_activity_data().then((activities) => {
+			if (!activities.length) {
+				this.show_more_button.hide();
+				this.timeline_wrapper.html(`<div>${__('No activities to show')}</div>`);
+				return;
+			}
+			this.show_more_button.toggle(activities.length === this.activity_limit);
+			this.timeline_items = activities.map((activity) => this.get_activity_timeline_item(activity));
+		});
+	}
+
+	get_user_activity_data() {
+		return frappe.xcall('frappe.desk.page.user_profile.user_profile.get_energy_points_list', {
+			start: this.activity_start,
+			limit: this.activity_limit,
+			user: this.user
+		});
+	}
+
+	get_activity_timeline_item(data) {
+		let icon = data.type == 'Appreciation' ? 'clap': data.type == 'Criticism' ? 'criticize': null;
+		return {
+			icon: icon,
+			creation: data.creation,
+			is_card: true,
+			content: frappe.energy_points.format_history_log(data),
+		};
+	}
+
+	setup_show_more_activity() {
+		this.show_more_button = $(`<a class="show-more-activity-btn">${__('Show More Activity')}</a>`);
+		this.show_more_button.hide();
+		this.footer.append(this.show_more_button);
+		this.show_more_button.on('click', () => this.show_more_activity());
+	}
+
+	show_more_activity() {
+		this.activity_start += this.activity_limit;
+		this.get_user_activity_data().then(activities => {
+			if (!activities.length || activities.length < this.activity_limit) {
+				this.show_more_button.hide();
+			}
+			let timeline_items = activities.map((activity) => this.get_activity_timeline_item(activity));
+			timeline_items.map((item) => this.add_timeline_item(item, true));
+		});
 	}
 }
 

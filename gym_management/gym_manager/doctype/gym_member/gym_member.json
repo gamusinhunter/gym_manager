@@ -19,7 +19,9 @@
   "initial_bmi",
   "observations",
   "picture",
-  "gym_member_metrics"
+  "gym_member_metrics",
+  "route",
+  "published"
  ],
  "fields": [
   {
@@ -97,11 +99,24 @@
    "fieldname": "initial_bmi",
    "fieldtype": "Data",
    "label": "Initial BMI"
+  },
+  {
+   "fieldname": "route",
+   "fieldtype": "Data",
+   "label": "Route"
+  },
+  {
+   "default": "0",
+   "fieldname": "published",
+   "fieldtype": "Check",
+   "label": "Published"
   }
  ],
+ "has_web_view": 1,
  "index_web_pages_for_search": 1,
+ "is_published_field": "published",
  "links": [],
- "modified": "2022-07-07 13:31:19.754502",
+ "modified": "2022-07-08 13:21:33.447621",
  "modified_by": "Administrator",
  "module": "Gym Manager",
  "name": "Gym Member",
@@ -121,6 +136,7 @@
    "write": 1
   }
  ],
+ "route": "customers",
  "sort_field": "modified",
  "sort_order": "DESC",
  "states": []
