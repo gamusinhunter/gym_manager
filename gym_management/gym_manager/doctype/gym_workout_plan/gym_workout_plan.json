@@ -13,7 +13,9 @@
   "gym_trainer",
   "length",
   "description",
-  "workout_plan"
+  "workout_plan",
+  "published",
+  "route"
  ],
  "fields": [
   {
@@ -55,11 +57,24 @@
    "fieldname": "length",
    "fieldtype": "Int",
    "label": "Length (days)"
+  },
+  {
+   "default": "0",
+   "fieldname": "published",
+   "fieldtype": "Check",
+   "label": "Published"
+  },
+  {
+   "fieldname": "route",
+   "fieldtype": "Data",
+   "label": "Route"
   }
  ],
+ "has_web_view": 1,
  "index_web_pages_for_search": 1,
+ "is_published_field": "published",
  "links": [],
- "modified": "2022-07-06 16:55:52.451590",
+ "modified": "2022-07-11 14:00:22.449791",
  "modified_by": "Administrator",
  "module": "Gym Manager",
  "name": "Gym Workout Plan",
@@ -79,6 +94,7 @@
    "write": 1
   }
  ],
+ "route": "plans",
  "sort_field": "modified",
  "sort_order": "DESC",
  "states": [

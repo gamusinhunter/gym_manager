@@ -1,13 +1,15 @@
 {
  "actions": [],
  "allow_rename": 1,
- "autoname": "format:{gym_member}-{gym_workout_plan}",
+ "autoname": "format:{gym_member}-{gym_workout_plan}-{##}",
  "creation": "2022-07-06 10:23:54.090492",
  "doctype": "DocType",
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
   "gym_workout_plan",
+  "gym_selected_plan",
+  "gym_trainer",
   "gym_member",
   "action",
   "from_date",
@@ -57,12 +59,26 @@
    "fieldname": "days_left",
    "fieldtype": "Int",
    "label": "Days left"
+  },
+  {
+   "fetch_from": "gym_workout_plan.gym_trainer",
+   "fieldname": "gym_trainer",
+   "fieldtype": "Data",
+   "label": "Gym Trainer",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "gym_workout_plan.plan_name",
+   "fieldname": "gym_selected_plan",
+   "fieldtype": "Data",
+   "label": "Selected plan",
+   "read_only": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2022-07-07 12:08:32.370940",
+ "modified": "2022-07-11 17:27:13.900029",
  "modified_by": "Administrator",
  "module": "Gym Manager",
  "name": "Gym Workout Plan Subscription",

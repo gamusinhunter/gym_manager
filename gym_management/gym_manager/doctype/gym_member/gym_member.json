@@ -19,6 +19,11 @@
   "initial_bmi",
   "observations",
   "picture",
+  "active_plan",
+  "allocated_trainer",
+  "trainer_phone",
+  "remaining_days",
+  "past_plans",
   "gym_member_metrics",
   "route",
   "published"
@@ -110,13 +115,38 @@
    "fieldname": "published",
    "fieldtype": "Check",
    "label": "Published"
+  },
+  {
+   "fieldname": "active_plan",
+   "fieldtype": "Data",
+   "label": "Active Plan"
+  },
+  {
+   "fieldname": "allocated_trainer",
+   "fieldtype": "Data",
+   "label": "Allocated Trainer"
+  },
+  {
+   "fieldname": "remaining_days",
+   "fieldtype": "Data",
+   "label": "Remaining Days"
+  },
+  {
+   "fieldname": "past_plans",
+   "fieldtype": "Data",
+   "label": "Past Plans"
+  },
+  {
+   "fieldname": "trainer_phone",
+   "fieldtype": "Data",
+   "label": "Trainer phone"
   }
  ],
  "has_web_view": 1,
  "index_web_pages_for_search": 1,
  "is_published_field": "published",
  "links": [],
- "modified": "2022-07-08 13:21:33.447621",
+ "modified": "2022-07-11 18:18:24.051409",
  "modified_by": "Administrator",
  "module": "Gym Manager",
  "name": "Gym Member",

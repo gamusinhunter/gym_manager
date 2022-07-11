@@ -4,6 +4,93 @@
 
 frappe.ui.form.on('Gym Member', {
 	refresh: function(frm) {
+
+		frappe.call({
+			method:"frappe.client.get_value",
+			args: {
+				doctype:"Gym Membership",
+				filters: {
+					gym_member: frm.doc.name
+				},
+				fieldname:["days_left"]
+			}, 
+			callback: function(r) {
+				var a = r.message.days_left;
+				console.log(a);
+				cur_frm.set_value('remaining_days', a);
+			}
+		})
+
+		frappe.call({
+			method:"frappe.client.get_value",
+			args: {
+				doctype:"Gym Workout Plan Subscription",
+				filters: [
+					['gym_member','like',frm.doc.name],
+					['docstatus','=',1],
+					['days_left','>',0]  
+				],
+				fieldname:["gym_trainer"]
+			}, 
+			callback: function(r) {
+				var a = r.message.gym_trainer;
+				console.log(a);
+				cur_frm.set_value('allocated_trainer', a);
+			}
+		})
+
+		frappe.call({
+			method:"frappe.client.get_value",
+			args: {
+				doctype:"Gym Trainer",
+				filters: {
+					trainer_name: frm.doc.allocated_trainer
+				},
+				fieldname:["trainer_phone"]
+			}, 
+			callback: function(r) {
+				var a = r.message.trainer_phone;
+				console.log(a);
+				cur_frm.set_value('trainer_phone', a);
+			}
+		})
+
+		frappe.call({
+			method:"frappe.client.get_value",
+			args: {
+				doctype:"Gym Workout Plan Subscription",
+				filters: [
+					['gym_member','like',frm.doc.name],
+					['docstatus','=',1],
+					['days_left','>',0]  
+				],
+				fieldname:["gym_selected_plan"]
+			}, 
+			callback: function(r) {
+				var a = r.message.gym_selected_plan;
+				console.log(a);
+				cur_frm.set_value('active_plan', a);
+			}
+		})
+
+		frappe.call({
+			method:"frappe.client.get_value",
+			args: {
+				doctype:"Gym Workout Plan Subscription",
+				filters: [
+					['gym_member','like',frm.doc.name],
+					['docstatus','=',1],
+					['days_left','<',0] 
+				],
+				fieldname:["gym_selected_plan"]
+			}, 
+			callback: function(r) {
+				var a = r.message.gym_selected_plan;
+				console.log(a);
+				cur_frm.set_value('past_plans', a);
+			}
+		})
+
 		frm.add_custom_button('Create Membership', () => {
 			frappe.new_doc('Gym Membership', {
 				gym_member: frm.doc.name

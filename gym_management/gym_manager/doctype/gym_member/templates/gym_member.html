@@ -1,7 +1,51 @@
 {% extends "templates/web.html" %}
 
 {% block page_content %}
-<h1>{{ title }}</h1>
+
+<div class="py-20 row">
+
+    <div class="col-sm-2">
+
+        <img alt="{{ title }}" src="{{ image }}">
+
+    </div>
+
+    <div class="col">
+
+        <h1>{{ first_name }}{{ last_name }}</h1>
+
+        <p class="lead">{{ active_plan }}</p>
+
+        <div>
+
+            {%- if remaining_days > '0' -%}
+
+            <div><strong>Membership remaining days: </strong><span class="badge badge-success">{{ remaining_days }}</span></div>
+
+            {%- elif remaining_days < '0' -%}
+
+            <div><strong>Membership remaining days: </strong><span class="badge badge-primary">{{ remaining_days }}</span></div>
+            
+            {%- endif -%}
+
+        </div>
+
+        <div class="mt-4">
+
+            <div>Allocated Trainer: <strong>{{ allocated_trainer }}</strong></div>
+            <div>Trainer contact phone: <strong>{{ trainer_phone }} </strong></div>
+
+        </div>
+
+        <div class="mt-5">
+            <div>Past plans: <strong>{{ past_plans }}</strong></div>
+        </div>
+
+
+    </div>
+
+</div>
+
 {% endblock %}
 
 <!-- this is a sample default web page template -->

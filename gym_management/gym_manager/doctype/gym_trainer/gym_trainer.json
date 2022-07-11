@@ -1,23 +1,19 @@
 {
  "actions": [],
  "allow_rename": 1,
- "autoname": "field:name1",
+ "autoname": "field:trainer_name",
  "creation": "2022-07-04 12:48:05.471934",
  "doctype": "DocType",
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
   "photo",
-  "name1",
+  "trainer_name",
+  "trainer_phone",
+  "trainer_email",
   "rating_and_reviews"
  ],
  "fields": [
-  {
-   "fieldname": "name1",
-   "fieldtype": "Data",
-   "label": "Name",
-   "unique": 1
-  },
   {
    "fieldname": "rating_and_reviews",
    "fieldtype": "Table",
@@ -28,11 +24,29 @@
    "fieldname": "photo",
    "fieldtype": "Attach Image",
    "label": "Photo"
+  },
+  {
+   "fieldname": "trainer_name",
+   "fieldtype": "Data",
+   "label": "Name",
+   "unique": 1
+  },
+  {
+   "fieldname": "trainer_phone",
+   "fieldtype": "Data",
+   "label": "Phone",
+   "options": "Phone"
+  },
+  {
+   "fieldname": "trainer_email",
+   "fieldtype": "Data",
+   "label": "Email",
+   "options": "Email"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2022-07-05 17:24:31.782468",
+ "modified": "2022-07-11 18:09:56.454357",
  "modified_by": "Administrator",
  "module": "Gym Manager",
  "name": "Gym Trainer",

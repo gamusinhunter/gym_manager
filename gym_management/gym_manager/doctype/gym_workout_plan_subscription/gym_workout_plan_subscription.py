@@ -15,13 +15,11 @@ class GymWorkoutPlanSubscription(Document):
 			gym_workout_plan = frappe.get_doc("Gym Workout Plan",self.gym_workout_plan)
 			gym_workout_plan.status = "Unsubscribed"
 			gym_workout_plan.save()
+		self.validate_membership()
 
 	def before_save(self):
 		if self.to_date:
 			self.days_left = frappe.utils.date_diff(self.to_date,frappe.utils.today())
-
-	def validate(self):
-		self.validate_membership()
 
 	def validate_membership(self):
 		valid_membership = frappe.db.exists(

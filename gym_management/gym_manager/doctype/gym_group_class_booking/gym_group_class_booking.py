@@ -19,3 +19,18 @@ class GymGroupClassBooking(Document):
 		if count >= max_classes:
 			frappe.throw("Maximum limit reached for booking classes")
 
+	def before_submit(self):
+		self.validate_membership()
+
+	def validate_membership(self):
+		valid_membership = frappe.db.exists(
+		"Gym Membership",
+			{
+				"gym_member": self.gym_member,
+				"docstatus": DocStatus.submitted(),
+				"to_date": (">", self.to_date),
+			},
+		)
+		if not valid_membership:
+			frappe.throw("Please check customer's membership")
+

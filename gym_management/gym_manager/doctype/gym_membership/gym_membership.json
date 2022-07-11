@@ -52,8 +52,7 @@
    "fieldname": "full_name",
    "fieldtype": "Data",
    "label": "Full name",
-   "read_only": 1,
-   "unique": 1
+   "read_only": 1
   },
   {
    "fieldname": "days_left",
@@ -64,7 +63,7 @@
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2022-07-07 10:59:19.823864",
+ "modified": "2022-07-11 16:06:19.881084",
  "modified_by": "Administrator",
  "module": "Gym Manager",
  "name": "Gym Membership",
