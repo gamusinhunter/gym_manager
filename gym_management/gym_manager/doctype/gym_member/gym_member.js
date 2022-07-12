@@ -58,6 +58,24 @@ frappe.ui.form.on('Gym Member', {
 		frappe.call({
 			method:"frappe.client.get_value",
 			args: {
+				doctype:"Gym Professional Trainer Plan Subscription",
+				filters: [
+					['gym_member','like',frm.doc.name],
+					['docstatus','=',1],
+					['days_left','>',0]  
+				],
+				fieldname:["gym_professional_trainer_plan"]
+			}, 
+			callback: function(r) {
+				var a = r.message.gym_professional_trainer_plan;
+				console.log(a);
+				cur_frm.set_value('professional_plan_submitted', a);
+			}
+		})
+
+		frappe.call({
+			method:"frappe.client.get_value",
+			args: {
 				doctype:"Gym Workout Plan Subscription",
 				filters: [
 					['gym_member','like',frm.doc.name],
@@ -95,7 +113,7 @@ frappe.ui.form.on('Gym Member', {
 			frappe.new_doc('Gym Membership', {
 				gym_member: frm.doc.name
 			})
-		})
+		});
 
 		frm.add_custom_button('Book Locker', () => {
 			let dialog = new frappe.ui.Dialog({
@@ -128,7 +146,7 @@ frappe.ui.form.on('Gym Member', {
 				}
 			});
 			dialog.show();
-		})
+		}, 'Booking');
 
 		frm.add_custom_button('Book Group class', () => {
 			let dialog = new frappe.ui.Dialog({
@@ -167,7 +185,7 @@ frappe.ui.form.on('Gym Member', {
 				}
 			});
 			dialog.show();
-		})
+		},'Booking');
 
 		frm.add_custom_button('Subscribe Workout Plan', () => {
 			let dialog = new frappe.ui.Dialog({
@@ -194,7 +212,7 @@ frappe.ui.form.on('Gym Member', {
 				}
 			});
 			dialog.show();
-		})
+		},'Subscriptions');
 
 		frm.add_custom_button('Subscribe Professional Trainer Plan', () => {
 			let dialog = new frappe.ui.Dialog({
@@ -233,6 +251,15 @@ frappe.ui.form.on('Gym Member', {
 				}
 			});
 			dialog.show();		
-		})
+		},'Subscriptions');
 	}
 });
+
+// frappe.ui.form.on('Gym Member', 'proba', function(frm){
+	
+	
+// 		frappe.new_doc('Gym Membership', {
+// 			gym_member: frm.doc.name
+// 		})
+	
+// });

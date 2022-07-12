@@ -6,25 +6,31 @@
 
     <div class="col-sm-2">
 
-        <img alt="{{ title }}" src="{{ image }}">
+        <img alt="{{ title }}" src="{{ picture }}">
 
     </div>
 
     <div class="col">
 
-        <h1>{{ first_name }}{{ last_name }}</h1>
+        <h1>{{ first_name }} {{ last_name }}</h1>
 
+        {%- if active_plan -%}
         <p class="lead">{{ active_plan }}</p>
+        {%- elif not active_plan -%}
+		<p class="lead">No active plans</p>
+        {%- endif -%}
+        
+        {%- if professional_plan_submitted -%}
+        <p class="lead">{{ professional_plan_submitted }}</p>
+        {%- elif not professional_plan_submitted -%}
+		<p class="lead">No active plans</p>
+        {%- endif -%}
 
         <div>
 
-            {%- if remaining_days > '0' -%}
+            {%- if remaining_days and remaining_days > '0' -%}
 
             <div><strong>Membership remaining days: </strong><span class="badge badge-success">{{ remaining_days }}</span></div>
-
-            {%- elif remaining_days < '0' -%}
-
-            <div><strong>Membership remaining days: </strong><span class="badge badge-primary">{{ remaining_days }}</span></div>
             
             {%- endif -%}
 
@@ -37,10 +43,39 @@
 
         </div>
 
+        {%- if past_plans -%}
         <div class="mt-5">
             <div>Past plans: <strong>{{ past_plans }}</strong></div>
         </div>
+        {%- elif not past_plans -%}
+        <div class="mt-5">
+            <div>No past plans to show</strong></div>
+        </div>
+        {%- endif -%}
 
+        <p></p>
+
+
+
+        <div class="table-responsive-md">
+            <table class="table">
+                {% for metrics in doc.gym_member_metrics %}
+                <thread>
+                    <th scope="col">Date</th>
+                    <th scope="col">Weight</th>
+                    <th scope="col">Bmi</th>
+                    <th scope="col">Squat PR</th>
+                </thread>
+                <tbody>
+                    <td>{{metrics.date}}</td>
+                    <td>{{metrics.weight}}</td>
+                    <td>{{metrics.bmi}}</td>
+                    <td>{{metrics.squat_pr}}</td>
+                </tbody>                   
+                {% endfor %}
+            </table>
+          </div>
+        
 
     </div>
 

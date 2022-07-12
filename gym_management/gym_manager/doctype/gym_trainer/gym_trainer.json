@@ -7,11 +7,15 @@
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
-  "photo",
   "trainer_name",
   "trainer_phone",
   "trainer_email",
-  "rating_and_reviews"
+  "column_break_4",
+  "photo",
+  "section_break_6",
+  "rating_and_reviews",
+  "published",
+  "route"
  ],
  "fields": [
   {
@@ -42,11 +46,32 @@
    "fieldtype": "Data",
    "label": "Email",
    "options": "Email"
+  },
+  {
+   "fieldname": "column_break_4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_6",
+   "fieldtype": "Section Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "published",
+   "fieldtype": "Check",
+   "label": "Published"
+  },
+  {
+   "fieldname": "route",
+   "fieldtype": "Data",
+   "label": "Route"
   }
  ],
+ "has_web_view": 1,
  "index_web_pages_for_search": 1,
+ "is_published_field": "published",
  "links": [],
- "modified": "2022-07-11 18:09:56.454357",
+ "modified": "2022-07-12 09:50:25.389208",
  "modified_by": "Administrator",
  "module": "Gym Manager",
  "name": "Gym Trainer",
@@ -66,6 +91,7 @@
    "write": 1
   }
  ],
+ "route": "trainers",
  "sort_field": "modified",
  "sort_order": "DESC",
  "states": []

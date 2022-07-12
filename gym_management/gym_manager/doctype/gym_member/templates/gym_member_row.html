@@ -2,15 +2,23 @@
 
     <div class="col-sm-1">
 
-        <img src="{{ doc.image }}" alt="{{ doc.name }}">
+        <img src="{{ doc.picture }}" alt="{{ doc.name }}">
 
     </div>
 
     <div class="col">
 
-        <a class="font-size-lg" href="{{ doc.route }}">{{ doc.name }}</a>
+        <a class="font-size-lg" href="{{ doc.route }}">{{ doc.first_name }} {{ doc.last_name }}</a>
+
+		{%- if active_plan -%}
 
         <p class="text-muted">{{ active_plan }}</p>
+
+		{%- elif not active_plan -%}
+
+		<p class="text-muted">No active plans</p>
+
+		{%- endif -%}
 
     </div>
 

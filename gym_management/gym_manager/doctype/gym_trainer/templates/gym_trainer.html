@@ -1,0 +1,50 @@
+{% extends "templates/web.html" %}
+
+{% block page_content %}
+
+<div class="py-20 row">
+
+    <div class="col-sm-2">
+
+        <img alt="{{ title }}" src="{{ photo }}">
+
+    </div>
+
+    <div class="col">
+
+        <h1>{{ trainer_name }}</h1>
+
+        <p class="lead">Senior trainer</p>
+
+        <div class="mt-4">
+            <div>Trainer contact phone: <strong>{{ trainer_phone }} </strong></div>
+            <div>Email: <strong>{{ trainer_email }} </strong></div>
+        </div>
+
+        <p></p>
+
+        <div class="table-responsive-md">
+            <table class="table">
+                {% for rate in doc.rating_and_reviews %}
+                <thread>
+                    <th scope="col">Reviewer name</th>
+                    <th scope="col">Rating</th>
+                    <th scope="col">Comments</th>
+                </thread>
+                <tbody>
+                    <td>{{rate.name1}}</td>
+                    <td>{{rate.trainer_rating}}</td>
+                    <td>{{rate.comments}}</td>
+                </tbody>                   
+                {% endfor %}
+            </table>
+          </div>
+
+
+    </div>
+
+</div>
+
+{% endblock %}
+
+<!-- this is a sample default web page template -->

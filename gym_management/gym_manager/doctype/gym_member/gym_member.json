@@ -1,7 +1,7 @@
 {
  "actions": [],
  "allow_rename": 1,
- "autoname": "format:{####} {first_name} {last_name}",
+ "autoname": "format:{first_name} {last_name} - {####} ",
  "creation": "2022-07-04 12:44:36.498781",
  "doctype": "DocType",
  "editable_grid": 1,
@@ -17,16 +17,20 @@
   "initial_weight",
   "initial_squat_pr",
   "initial_bmi",
-  "observations",
+  "column_break_11",
   "picture",
   "active_plan",
   "allocated_trainer",
+  "professional_plan_submitted",
   "trainer_phone",
   "remaining_days",
   "past_plans",
+  "observations",
+  "section_break_20",
   "gym_member_metrics",
   "route",
-  "published"
+  "published",
+  "proba"
  ],
  "fields": [
   {
@@ -140,13 +144,31 @@
    "fieldname": "trainer_phone",
    "fieldtype": "Data",
    "label": "Trainer phone"
+  },
+  {
+   "fieldname": "column_break_11",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_20",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "proba",
+   "fieldtype": "Button",
+   "label": "Proba"
+  },
+  {
+   "fieldname": "professional_plan_submitted",
+   "fieldtype": "Data",
+   "label": "Professional Plan Submitted"
   }
  ],
  "has_web_view": 1,
  "index_web_pages_for_search": 1,
  "is_published_field": "published",
  "links": [],
- "modified": "2022-07-11 18:18:24.051409",
+ "modified": "2022-07-12 13:09:16.755648",
  "modified_by": "Administrator",
  "module": "Gym Manager",
  "name": "Gym Member",

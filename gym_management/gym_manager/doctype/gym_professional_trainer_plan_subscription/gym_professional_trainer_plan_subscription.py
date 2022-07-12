@@ -7,6 +7,10 @@ from frappe.model.docstatus import DocStatus
 
 class GymProfessionalTrainerPlanSubscription(Document):
 	
+		def before_save(self):
+			if self.to_date:
+				self.days_left = frappe.utils.date_diff(self.to_date,frappe.utils.today())
+
 		def before_submit(self):
 			self.validate_membership()
 
