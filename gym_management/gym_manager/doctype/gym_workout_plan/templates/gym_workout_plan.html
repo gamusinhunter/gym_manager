@@ -1,7 +1,51 @@
 {% extends "templates/web.html" %}
 
 {% block page_content %}
-<h1>{{ title }}</h1>
-{% endblock %}
 
-<!-- this is a sample default web page template -->
+<div class="py-20 row">
+
+    <div class="col-sm-2">
+
+        <img alt="{{ title }}" src="{{ photo }}">
+
+    </div>
+
+    <div class="col">
+
+        <h1>{{ name }}</h1>
+
+        <p class="lead">{{ level }}</p>
+        <p class="lead">Duration: <storng>{{ length }}</storng></p>
+
+        <div class="mt-4">
+            <div>Trainer: <strong>{{ gym_trainer }} </strong></div>
+            <div>Description: <strong>{{ description }} </strong></div>
+        </div>
+
+        <br>
+
+        <div class="table-responsive-md">
+            <table class="table">
+                <thread>
+                    <th scope="col">Exercise</th>
+                    <th scope="col">Reps</th>
+                    <th scope="col">Rest</th>
+                    <th scope="col">Timecap</th>
+                </thread>
+                {% for detail in doc.workout_plan_exercise %}
+                <tbody>
+                    <td>{{detail.exercise}}</td>
+                    <td>{{detail.reps}}</td>
+                    <td>{{detail.rest}}</td>
+                    <td>{{detail.timecap}}</td>
+                </tbody>                   
+                {% endfor %}
+            </table>
+          </div>
+
+
+    </div>
+
+</div>
+
+{% endblock %}

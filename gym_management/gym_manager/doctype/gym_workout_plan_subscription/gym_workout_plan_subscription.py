@@ -9,11 +9,11 @@ class GymWorkoutPlanSubscription(Document):
 	def before_submit(self):
 		if self.action == "Subscribe":
 			gym_workout_plan = frappe.get_doc("Gym Workout Plan",self.gym_workout_plan)
-			gym_workout_plan.status = "Subscribed"
+			gym_workout_plan.subscription_status = "Subscribed"
 			gym_workout_plan.save()
 		elif self.action == "Unsubscribe":
 			gym_workout_plan = frappe.get_doc("Gym Workout Plan",self.gym_workout_plan)
-			gym_workout_plan.status = "Unsubscribed"
+			gym_workout_plan.subscription_status = "Unsubscribed"
 			gym_workout_plan.save()
 		self.validate_membership()
 

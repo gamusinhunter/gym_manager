@@ -7,13 +7,13 @@
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
-  "status",
+  "subscription_status",
   "plan_name",
   "level",
   "gym_trainer",
   "length",
   "description",
-  "workout_plan",
+  "workout_plan_exercise",
   "published",
   "route"
  ],
@@ -23,12 +23,6 @@
    "fieldtype": "Link",
    "label": "Gym Trainer",
    "options": "Gym Trainer"
-  },
-  {
-   "fieldname": "workout_plan",
-   "fieldtype": "Table",
-   "label": "Workout Plan",
-   "options": "Gym Workout Plan Exercise"
   },
   {
    "fieldname": "level",
@@ -41,12 +35,6 @@
    "fieldtype": "Data",
    "label": "Plan name",
    "unique": 1
-  },
-  {
-   "fieldname": "status",
-   "fieldtype": "Select",
-   "label": "Status",
-   "options": "Subscribed\nUnsubscribed"
   },
   {
    "fieldname": "description",
@@ -68,13 +56,25 @@
    "fieldname": "route",
    "fieldtype": "Data",
    "label": "Route"
+  },
+  {
+   "fieldname": "subscription_status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "\nSubscribed\nUnsubscribed"
+  },
+  {
+   "fieldname": "workout_plan_exercise",
+   "fieldtype": "Table",
+   "label": "Workout Plan",
+   "options": "Gym Workout Plan Detail"
   }
  ],
  "has_web_view": 1,
  "index_web_pages_for_search": 1,
  "is_published_field": "published",
  "links": [],
- "modified": "2022-07-11 14:00:22.449791",
+ "modified": "2022-07-13 10:18:57.398269",
  "modified_by": "Administrator",
  "module": "Gym Manager",
  "name": "Gym Workout Plan",

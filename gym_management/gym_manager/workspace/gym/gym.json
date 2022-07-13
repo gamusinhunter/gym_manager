@@ -1,0 +1,224 @@
+{
+ "charts": [],
+ "content": "[{\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">Gym Management<br></span>\",\"col\":12}},{\"type\":\"card\",\"data\":{\"card_name\":\"Members\",\"col\":4}},{\"type\":\"card\",\"data\":{\"card_name\":\"Trainers\",\"col\":4}},{\"type\":\"card\",\"data\":{\"card_name\":\"Lockers\",\"col\":4}},{\"type\":\"card\",\"data\":{\"card_name\":\"Group Classes\",\"col\":4}},{\"type\":\"card\",\"data\":{\"card_name\":\"Workout Plans\",\"col\":4}},{\"type\":\"card\",\"data\":{\"card_name\":\"Professional Trainer Plans\",\"col\":4}}]",
+ "creation": "2022-07-13 11:13:22.250493",
+ "docstatus": 0,
+ "doctype": "Workspace",
+ "for_user": "",
+ "hide_custom": 0,
+ "icon": "review",
+ "idx": 0,
+ "label": "Gym",
+ "links": [
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Members",
+   "link_count": 3,
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "List",
+   "link_count": 0,
+   "link_to": "Gym Member",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Fitness Journey",
+   "link_count": 0,
+   "link_to": "Fitness Journey with chart",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Memberships",
+   "link_count": 0,
+   "link_to": "Gym Membership",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Group Classes",
+   "link_count": 4,
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Group Classes",
+   "link_count": 0,
+   "link_to": "Gym Group Class",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Class booking",
+   "link_count": 0,
+   "link_to": "Gym Group Class Booking",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Most popular classes",
+   "link_count": 0,
+   "link_to": "Most popular group classes",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Attended classes",
+   "link_count": 0,
+   "link_to": "Weekly summary attended classes",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Lockers",
+   "link_count": 2,
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Lockers",
+   "link_count": 0,
+   "link_to": "Gym Locker",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Bookings",
+   "link_count": 0,
+   "link_to": "Gym Locker Booking",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Workout Plans",
+   "link_count": 2,
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Workout Plans",
+   "link_count": 0,
+   "link_to": "Gym Workout Plan",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Subscriptions",
+   "link_count": 0,
+   "link_to": "Gym Workout Plan Subscription",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Trainers",
+   "link_count": 2,
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Trainers",
+   "link_count": 0,
+   "link_to": "Gym Trainer",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Subscriptions",
+   "link_count": 0,
+   "link_to": "Gym Trainer Subscription",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Professional Trainer Plans",
+   "link_count": 2,
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Professional Trainer Plans",
+   "link_count": 0,
+   "link_to": "Gym Professional Trainer Plan",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Subscriptions",
+   "link_count": 0,
+   "link_to": "Gym Professional Trainer Plan Subscription",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  }
+ ],
+ "modified": "2022-07-13 11:55:17.154556",
+ "modified_by": "Administrator",
+ "module": "Gym Manager",
+ "name": "Gym",
+ "owner": "Administrator",
+ "parent_page": "",
+ "public": 1,
+ "quick_lists": [],
+ "roles": [],
+ "sequence_id": 30.0,
+ "shortcuts": [],
+ "title": "Gym"
+}

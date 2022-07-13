@@ -21,16 +21,16 @@
             <div>Email: <strong>{{ trainer_email }} </strong></div>
         </div>
 
-        <p></p>
+        <br>
 
         <div class="table-responsive-md">
             <table class="table">
-                {% for rate in doc.rating_and_reviews %}
                 <thread>
                     <th scope="col">Reviewer name</th>
                     <th scope="col">Rating</th>
                     <th scope="col">Comments</th>
                 </thread>
+                {% for rate in doc.rating_and_reviews %}
                 <tbody>
                     <td>{{rate.name1}}</td>
                     <td>{{rate.trainer_rating}}</td>

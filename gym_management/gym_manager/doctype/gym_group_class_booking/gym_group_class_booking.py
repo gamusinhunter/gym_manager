@@ -27,8 +27,7 @@ class GymGroupClassBooking(Document):
 		"Gym Membership",
 			{
 				"gym_member": self.gym_member,
-				"docstatus": DocStatus.submitted(),
-				"to_date": (">", self.to_date),
+				"docstatus": DocStatus.submitted()
 			},
 		)
 		if not valid_membership:

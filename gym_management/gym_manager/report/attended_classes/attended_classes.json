@@ -1,0 +1,36 @@
+{
+ "add_total_row": 0,
+ "columns": [],
+ "creation": "2022-07-13 13:45:24.221965",
+ "disable_prepared_report": 0,
+ "disabled": 0,
+ "docstatus": 0,
+ "doctype": "Report",
+ "filters": [],
+ "idx": 0,
+ "is_standard": "Yes",
+ "json": "{\"filters\":[],\"fields\":[[\"name\",\"Gym Group Class Booking\"],[\"docstatus\",\"Gym Group Class Booking\"],[\"gym_member\",\"Gym Group Class Booking\"],[\"gym_class\",\"Gym Group Class Booking\"],[\"day\",\"Gym Group Class Booking\"],[\"spot\",\"Gym Group Class Booking\"]],\"order_by\":\"`tabGym Group Class Booking`.`modified` desc\",\"page_length\":20,\"column_widths\":{\"name\":120,\"docstatus\":120,\"gym_member\":120,\"gym_class\":120,\"day\":120,\"spot\":120},\"group_by\":null}",
+ "modified": "2022-07-13 13:46:50.406806",
+ "modified_by": "Administrator",
+ "module": "Gym Manager",
+ "name": "Attended classes",
+ "owner": "Administrator",
+ "prepared_report": 0,
+ "ref_doctype": "Gym Group Class Booking",
+ "report_name": "Attended classes",
+ "report_type": "Report Builder",
+ "roles": [
+  {
+   "role": "System Manager"
+  },
+  {
+   "role": "Gym Admin"
+  },
+  {
+   "role": "Gym Member"
+  },
+  {
+   "role": "Gym Trainer"
+  }
+ ]
+}

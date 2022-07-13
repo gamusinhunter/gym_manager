@@ -15,6 +15,12 @@ fixtures = [
 	"filters": {
 		"name": ["in", "Gym Admin,Gym Member,Gym Trainer"]
         }
+	},
+	    {
+	"doctype": "Auto Email Report",
+	"filters": {
+		"name": ["in", "Weekly summary attended classes"]
+        }
 	}
 ]
 

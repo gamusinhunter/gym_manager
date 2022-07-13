@@ -1,0 +1,59 @@
+{
+ "actions": [],
+ "autoname": "autoincrement",
+ "creation": "2022-07-13 10:18:30.107225",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "exercise",
+  "reps",
+  "rest",
+  "timecap"
+ ],
+ "fields": [
+  {
+   "columns": 2,
+   "fieldname": "exercise",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Exercise",
+   "reqd": 1
+  },
+  {
+   "columns": 1,
+   "fieldname": "reps",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Reps",
+   "reqd": 1
+  },
+  {
+   "columns": 2,
+   "fieldname": "rest",
+   "fieldtype": "Time",
+   "in_list_view": 1,
+   "label": "Rest"
+  },
+  {
+   "columns": 2,
+   "fieldname": "timecap",
+   "fieldtype": "Time",
+   "in_list_view": 1,
+   "label": "Timecap"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2022-07-13 10:18:30.107225",
+ "modified_by": "Administrator",
+ "module": "Gym Manager",
+ "name": "Gym Workout Plan Detail",
+ "naming_rule": "Autoincrement",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
